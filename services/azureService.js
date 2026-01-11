@@ -103,7 +103,7 @@ class AzureOpenAIService {
         .join('\n');
 
       // Get system prompt and model
-      if (config.useExistingData === 'yes' && config.restrictToExistingTags === 'no' && config.restrictToExistingCorrespondents === 'no') {
+      if (config.useExistingData === 'yes') {
         systemPrompt = `
         Pre-existing tags: ${existingTagsList}\n\n
         Pre-existing correspondents: ${existingCorrespondentList}\n\n

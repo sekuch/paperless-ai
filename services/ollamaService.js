@@ -286,7 +286,7 @@ class OllamaService {
             .join('\n');
 
         // Get system prompt based on configuration
-        if (config.useExistingData === 'yes' && config.restrictToExistingTags === 'no' && config.restrictToExistingCorrespondents === 'no') {
+        if (config.useExistingData === 'yes') {
             // Format existing tags
             const existingTagsList = existingTags.join(', ');
 
